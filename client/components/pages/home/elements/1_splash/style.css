@@ -1,4 +1,12 @@
 
+/*
+  slider is taken from:
+  http://codepen.io/AMKohn/pen/EKJHf
+
+  Would have wanted to implement this though:
+  http://owlgraphic.com/owlcarousel/demos/transitions.html
+
+ */
 .slide-container {
   width: 100%;
   overflow: hidden;
