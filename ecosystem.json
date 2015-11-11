@@ -2,7 +2,7 @@
   "apps" : [{
     "name"      : "EPIC-DEVELOPMENT.BERLIN",
     "script"    : "server/app.js",
-    "node_args"   : "--harmony",
+    "node_args"   : "",
     "instances"  : 2,
     "exec_mode"  : "cluster_mode",
     "watch"       : true,
@@ -17,7 +17,7 @@
       "ref"  : "origin/master",
       "repo" : "https://github.com/eljefedelrodeodeljefe/epic-development.berlin.git",
       "path" : "/var/www/epic-development.berlin/production",
-      "post-deploy" : "npm install && pwd && ls && pm2 startOrRestart ecosystem.json --env production"
+      "post-deploy" : "pwd && ls && pm2 startOrRestart ecosystem.json --env production"
     },
     "dev" : {
       "user" : "safeuser",
@@ -25,7 +25,7 @@
       "ref"  : "origin/development",
       "repo" : "https://github.com/eljefedelrodeodeljefe/epic-development.berlin.com.git",
       "path" : "/var/www/epic-development.berlin/development",
-      "post-deploy" : "npm install && pwd && ls && pm2 startOrRestart ecosystem.json --env dev ",
+      "post-deploy" : "pwd && ls && pm2 startOrRestart ecosystem.json --env dev ",
       "env"  : {
         "NODE_ENV": "dev"
       }
