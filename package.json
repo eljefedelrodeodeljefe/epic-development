@@ -2,6 +2,7 @@
   "name": "epic-development.berlin",
   "version": "0.1.0-alpha.1",
   "description": "Website for epic-development.berlin",
+  "private": true,
   "main": "server/app.js",
   "scripts": {
     "dev": "npm run copy & watchify -vd -p [ parcelify -wo build/bundle.css ] -t [ babelify --presets [ es2015 ] ] -t stringify -t vueify -t [ browserify-css --autoInject=true --minify=true --rebaseUrls=true ] -e client/main.js -o build/build.js & nodemon server/app.js",

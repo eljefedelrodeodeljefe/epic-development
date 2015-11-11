@@ -5,6 +5,7 @@
     "node_args"   : "--harmony",
     "instances"  : 2,
     "exec_mode"  : "cluster_mode",
+    "watch"       : true,
     "env": {
       "NODE_ENV": "production"
     }
