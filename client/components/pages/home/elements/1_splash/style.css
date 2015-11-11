@@ -118,3 +118,15 @@ input#img-5:checked ~ .nav-dots label#img-dot-5,
 input#img-6:checked ~ .nav-dots label#img-dot-6 {
 	background: rgba(0, 0, 0, 0.8);
 }
+
+
+h1.make-it {
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  top: 5em;
+}
