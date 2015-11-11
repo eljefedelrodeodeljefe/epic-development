@@ -277,7 +277,16 @@ div {
     color: #AECFE5;
 }
 
+.pure-menu-heading.v-link-active.logo {
+  padding: 0;
+  margin: 0;
+}
 
+/*TODO: not centered*/
+.header.logo {
+  width: 2.4em;
+  height: 2.4em;
+}
 
 @media (min-width: 48em) {
   .home-menu {
