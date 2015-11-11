@@ -269,7 +269,7 @@ div {
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: #ffffff;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
@@ -293,13 +293,13 @@ div {
   .home-menu {
       text-align: left;
   }
-      .home-menu ul {
-          float: left;
-      }
+  .home-menu ul {
+      float: left;
+  }
 
-      .pure-menu.social {
-          float: right;
-      }
+  .pure-menu.social {
+      float: right;
+  }
 }
 
 .slide-container {
