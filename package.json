@@ -1,8 +1,8 @@
 {
-  "name": "vue-browserify-boilerplate",
+  "name": "epic-development.berlin",
   "version": "0.1.0-alpha.1",
-  "description": "Vueify transform for Browserify example",
-  "main": "index.js",
+  "description": "Website for epic-development.berlin",
+  "main": "server/app.js",
   "scripts": {
     "dev": "npm run copy & watchify -vd -p [ parcelify -wo build/bundle.css ] -t [ babelify --presets [ es2015 ] ] -t stringify -t vueify -t [ browserify-css --autoInject=true --minify=true --rebaseUrls=true ] -e client/main.js -o build/build.js & nodemon server/app.js",
     "build": "NODE_ENV=production ./node_modules/watchify/node_modules/.bin/browserify -t vueify -e src/main.js | uglifyjs -c warnings=false -m > build/build.js",
