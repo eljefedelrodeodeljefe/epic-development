@@ -1,0 +1,60 @@
+
+/*
+ * -- MENU STYLES --
+ * I want to customize how my .pure-menu looks at the top of the page
+ */
+
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+.home-menu {
+    background: rgba(160, 176, 193, 0.65);
+}
+.pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: white;
+}
+
+.home-menu a {
+    color: #6FBEF3;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    background: none;
+    border: none;
+    color: #AECFE5;
+}
+
+.pure-menu-heading.v-link-active.logo {
+  padding: 0;
+  margin: 0;
+}
+
+/*TODO: not centered*/
+.header.logo {
+  width: 2.4em;
+  height: 2.4em;
+}
+
+@media (min-width: 48em) {
+  .home-menu {
+      text-align: left;
+  }
+      .home-menu ul {
+          float: right;
+      }
+}
