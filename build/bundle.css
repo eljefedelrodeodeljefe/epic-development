@@ -238,7 +238,37 @@ div {
  * I want to customize how my .pure-menu looks at the top of the page
  */
 
+ .pure-menu-heading.logo {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%);
+ }
+
+ /*TODO: not centered*/
+ .header.logo {
+   width: 3em;
+ }
+
+
+ /*
+   Null everything when logo starts to flow into text
+  */
+ @media (max-width: 60em) {
+   .pure-menu-heading.logo {
+     position: relative;
+     top: 0;
+     left: 0;
+     margin-right: 0;
+     transform: translate(0, 0);
+   }
+
+ }
+
+
 .home-menu {
+    position: relative;
     padding: 0.5em;
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
@@ -279,11 +309,6 @@ div {
   margin: 0;
 }
 
-/*TODO: not centered*/
-.header.logo {
-  width: 2.4em;
-  height: 2.4em;
-}
 
 @media (min-width: 48em) {
   .home-menu {
@@ -298,6 +323,14 @@ div {
   }
 }
 
+/*
+  slider is taken from:
+  http://codepen.io/AMKohn/pen/EKJHf
+
+  Would have wanted to implement this though:
+  http://owlgraphic.com/owlcarousel/demos/transitions.html
+
+ */
 .slide-container {
   width: 100%;
   overflow: hidden;
