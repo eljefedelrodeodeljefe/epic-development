@@ -32,6 +32,13 @@
 
  }
 
+a.social:link,
+a.social:visited,
+a.social:hover,
+a.social:active {
+  text-decoration: none;
+  color: white;
+}
 
 .home-menu {
     position: relative;
