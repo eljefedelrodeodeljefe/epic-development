@@ -319,6 +319,10 @@ div {
   margin: 0;
 }
 
+.pure-menu-list.social {
+  float: right;
+}
+
 
 @media (min-width: 48em) {
   .home-menu {
