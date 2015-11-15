@@ -332,9 +332,6 @@ div {
       float: right;
   }
 }
-html {
-  margin: 0;
-  padding: 0; }
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 /*
@@ -507,3 +504,6 @@ h1.make-it > span {
   /* fill parent */
   background-color: grey;
 }
+html {
+  margin: 0;
+  padding: 0; }
