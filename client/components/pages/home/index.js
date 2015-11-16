@@ -1,7 +1,7 @@
 import Counter from '../../counter/index.js'
 import Splash from './elements/1_splash/index.js'
 import Leistungen from './elements/2_leistungen/index.js'
-import Subhead2 from './elements/3_subhead_2/index.js'
+import Referenzen from './elements/3_referenzen/index.js'
 import Kontakt from './elements/4_kontakt/index.js'
 import Box1 from './elements/5_box_1/index.js'
 
@@ -12,7 +12,7 @@ module.exports = {
   components: {
     Splash,
     Leistungen,
-    Subhead2,
+    Referenzen,
     Kontakt,
     Box1,
     FooterNav

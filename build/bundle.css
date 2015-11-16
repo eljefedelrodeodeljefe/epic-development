@@ -518,3 +518,5 @@ h1.make-it > span {
 html {
   margin: 0;
   padding: 0; }
+.ref-link {
+  padding: 0.5em; }
