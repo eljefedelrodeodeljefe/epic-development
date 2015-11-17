@@ -6,8 +6,9 @@
   "main": "server/app.js",
   "scripts": {
     "dev": "npm run copy & watchify -vd -p [ parcelify -wo build/bundle.css ] -t [ babelify --presets [ es2015 ] ] -t stringify -t vueify -t [ browserify-css --autoInject=true --minify=true --rebaseUrls=true ] -e client/main.js -o build/build.js & nodemon server/app.js",
-    "build": "NODE_ENV=production uglifyjs -c warnings=false -m build/build.js > build/prod/build.js",
-    "copy": "node -e 'var fs = require(\"fs\");fs.createReadStream(\"client/index.html\").pipe(fs.createWriteStream(\"build/index.html\"));'"
+    "prod": "NODE_ENV=production npm run copy-prod && uglifyjs --compress --mangle -o build/prod/build.js -- build/build.js",
+    "copy": "node -e 'var fs = require(\"fs\");fs.createReadStream(\"client/index.html\").pipe(fs.createWriteStream(\"build/index.html\"));'",
+    "copy-prod": "node -e 'var fs = require(\"fs\");fs.createReadStream(\"client/production.html\").pipe(fs.createWriteStream(\"build/index.html\"));'"
   },
   "style": [
     "client/**/*.css",
