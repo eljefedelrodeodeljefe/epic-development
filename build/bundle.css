@@ -307,8 +307,8 @@ i.size-21 {
     z-index: 4;
 }
 
-.pure-menu-children.leistungen {
-  margin-top: 0.5em;
+ul {
+  padding: 0;
 }
 
 .home-menu .pure-menu-heading {
