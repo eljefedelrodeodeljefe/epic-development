@@ -40,6 +40,10 @@ a.social:active {
   color: white;
 }
 
+i.size-21 {
+  font-size: 1.5em;
+}
+
 .home-menu {
     position: relative;
     padding: 0.5em;
