@@ -7,57 +7,20 @@
 
 
           <ul class="slides">
-            <input type="radio" name="radio-btn" id="img-1" checked />
-            <li class="slide-container">
-        		<div class="slide">
-        			<img src="http://res.cloudinary.com/jefe-io/image/upload/c_scale,w_1322/v1447617492/splash-home_zhsrro.png" />
-                </div>
-        		<div class="nav">
-        			<label for="img-6" class="prev">&#x2039;</label>
-        			<label for="img-2" class="next">&#x203a;</label>
-        		</div>
-            </li>
-
-            <input type="radio" name="radio-btn" id="img-2" />
-            <li class="slide-container">
-                <div class="slide">
-                  <img src="http://res.cloudinary.com/jefe-io/image/upload/c_scale,w_1314/v1447617124/1548168_331138637048654_2974130967997751976_o_abegam.jpg" />
-                </div>
-        		<div class="nav">
-        			<label for="img-1" class="prev">&#x2039;</label>
-        			<label for="img-3" class="next">&#x203a;</label>
-        		</div>
-            </li>
-
-            <input type="radio" name="radio-btn" id="img-3" />
-            <li class="slide-container">
-                <div class="slide">
-                  <img src="http://res.cloudinary.com/jefe-io/image/upload/c_scale,w_1322/v1447617129/10273303_295558303940021_3122393801162874264_o-1_kbap6k.jpg" />
-                </div>
-        		<div class="nav">
-        			<label for="img-2" class="prev">&#x2039;</label>
-        			<label for="img-4" class="next">&#x203a;</label>
-        		</div>
-            </li>
-
-            <input type="radio" name="radio-btn" id="img-4" />
-            <li class="slide-container">
-                <div class="slide">
-                  <img src="http://res.cloudinary.com/jefe-io/image/upload/c_scale,w_1322/v1447617127/1911020_331141580381693_523657765020535647_o_tc7yxu.jpg" />
-                </div>
-        		<div class="nav">
-        			<label for="img-3" class="prev">&#x2039;</label>
-        			<label for="img-1" class="next">&#x203a;</label>
-        		</div>
-            </li>
-
-
-
+            <div v-for="link in links" class="slider-item">
+              <input type="radio" name="radio-btn" id="img-{{ $index + 1 }}" checked />
+              <li class="slide-container">
+              <div class="slide">
+                <img src="{{ link }}" />
+                  </div>
+              <div class="nav">
+                <label for="img-{{ $index + 1 === 1 ? links.length : $index + 1 - 1 }}" class="prev">&#x2039;</label>
+                <label for="img-{{ $index + 1 +1 }}" class="next">&#x203a;</label>
+              </div>
+              </li>
+            </div>
             <li class="nav-dots">
-              <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-              <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-              <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-              <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+              <label v-for="link in links" for="img-{{ $index + 1 }}" class="nav-dot" id="img-dot-{{ $index + 1 }}"></label>
             </li>
         </ul>
 
