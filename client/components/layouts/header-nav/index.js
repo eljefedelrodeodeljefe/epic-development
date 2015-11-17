@@ -8,7 +8,7 @@ module.exports = {
   methods: {
   jump: function (h) {
     var pos = document.getElementById(h).offsetTop;
-    window.scrollTo(0, pos);
+    window.scrollTo(0, pos - 50);
   }
 }
 };
