@@ -1,0 +1,24 @@
+.pure-u-2-5.leistungen {
+  padding: 2em;
+  margin-top: 2em;
+}
+
+div.leistungen > hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 80%;
+}
+
+div.pure-g.leistungen {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+div.pure-g.leistungen > div > p {
+  text-align: justify;
+  hyphens: auto; 
+  /*word-wrap: break-word;*/
+  width: 90%;
+}
