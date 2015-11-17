@@ -307,6 +307,10 @@ i.size-21 {
     z-index: 4;
 }
 
+.pure-menu-children.leistungen {
+  margin-top: 0.5em;
+}
+
 .home-menu .pure-menu-heading {
     color: white;
     font-weight: 400;
