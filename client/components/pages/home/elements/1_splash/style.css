@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 /*
   slider is taken from:
@@ -138,15 +137,30 @@ h1.make-it {
   margin-right: -50%;
   transform: translate(-50%, -50%);
   top: 5em;
-  font-family: 'Pacifico', cursive;
-  font-style: italic;
+  font-family: 'bebas_neueregular';
   font-size: 3em;
 }
 
 h1.make-it > span {
-  font-family: 'bebas_neueregular';
+  font-family: 'Helvetica';
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 0.7em;
+}
+
+p.sub-epic {
+  text-align: justify;
+  line-height: 1em;
+  width: 42%;
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  top: 15em;
+  font-family: 'Helvetica';
+  font-size: 0.7em;
 }
 
 .wrapper {
