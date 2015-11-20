@@ -18,7 +18,21 @@ div.pure-g.leistungen {
 
 div.pure-g.leistungen > div > p {
   text-align: justify;
-  hyphens: auto; 
+  hyphens: auto;
   /*word-wrap: break-word;*/
   width: 90%;
+}
+
+.pure-u-3-5 > ul {
+  list-style-type: none;
+}
+
+.pure-u-3-5 > ul > li:before {
+  content:"-";
+  position:relative;
+  left: -0.75em;
+}
+
+.content-subhead.leistungen {
+  color: #4d4d4d;
 }
