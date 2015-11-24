@@ -147,20 +147,29 @@ h1.make-it > span {
   font-size: 0.7em;
 }
 
-p.sub-epic {
-  text-align: justify;
-  line-height: 1em;
-  width: 42%;
-  color: white;
-  display: block;
+div.make-it-container {
+  width: 100%;
   position: absolute;
-  z-index: 1;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  top: 15em;
-  font-family: 'Helvetica';
-  font-size: 0.7em;
+  top: 10em;
+  z-index: 20;
+}
+p.sub-epic {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+
+  font-size: 1.0em;
+
+  position: relative;
+}
+
+p.sub-epic.bigger {
+  font-size: 1.5em;
+}
+
+p.sub-epic.block {
+  text-align: justify;
 }
 
 .wrapper {
