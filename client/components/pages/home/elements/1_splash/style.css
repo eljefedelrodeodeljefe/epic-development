@@ -169,7 +169,7 @@ p.sub-epic.bigger {
 }
 
 p.sub-epic.block {
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 .wrapper {
