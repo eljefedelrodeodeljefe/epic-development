@@ -349,6 +349,17 @@ i.size-21 {
       float: right;
   }
 }
+div.datenschutz {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+div.datenschutz > p,
+div.datenschutz > h2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70%;
+}
 
 /*
   slider is taken from:
@@ -520,7 +531,7 @@ p.sub-epic.bigger {
 }
 
 p.sub-epic.block {
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 .wrapper {

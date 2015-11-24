@@ -3,7 +3,7 @@ var css = require('./app.css')
 
 import HeaderNav from './components/layouts/header-nav/index.js'
 import Home from './components/pages/home/index.js'
-import About from './components/pages/about/index.js'
+import Datenschutz from './components/pages/datenschutz/index.js'
 // // var App = require('./app.js')
 var VueRouter = require('vue-router')
 
@@ -32,8 +32,8 @@ router.map({
     '/': {
       component: Home
     },
-    '/about': {
-      component: About
+    '/datenschutz': {
+      component: Datenschutz
     }
 })
 
