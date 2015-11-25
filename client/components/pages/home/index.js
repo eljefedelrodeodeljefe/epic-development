@@ -3,8 +3,7 @@ import Splash from './elements/1_splash/index.js'
 import Leistungen from './elements/2_leistungen/index.js'
 import Referenzen from './elements/3_referenzen/index.js'
 import About from './elements/4_about/index.js'
-import Partners from './elements/5_partner/index.js'
-import Box1 from './elements/6_box_1/index.js'
+import Newsletter from './elements/5_newsletter/index.js'
 
 import FooterNav from '../../layouts/footer-nav/index.js'
 
@@ -15,9 +14,7 @@ module.exports = {
     Leistungen,
     Referenzen,
     About,
-    // Partners,
-    // Box1,
+    Newsletter,
     FooterNav
-    // Counter
   }
 }
