@@ -170,8 +170,26 @@ p.sub-epic.bigger {
 
 p.sub-epic.block {
   /*text-align: justify;*/
+  overflow-y: auto;
 }
 
+@media (max-width: 594px) {
+  p.sub-epic.block {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  p.sub-epic.block {
+    max-height: 8em;
+  }
+}
+
+@media (max-width: 950px) {
+  p.sub-epic.block {
+    max-height: 10em;
+  }
+}
 .wrapper {
   width: 100%;
   /* whatever width you want */
