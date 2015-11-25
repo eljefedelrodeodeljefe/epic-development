@@ -1,0 +1,12 @@
+div.footer {
+  color: white;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+div.footer > p {
+  font-size: 0.8em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em;
+}
