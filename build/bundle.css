@@ -236,12 +236,6 @@ a.pure-button-primary {
     font-weight: normal;
     font-style: normal;
 }
-div {
-  color: #333;
-}
-.count {
-  color: red;
-}
 div.footer {
   color: white;
   padding-top: 1em;
@@ -674,3 +668,25 @@ html {
 
 .ribbon.referenzen {
   background-color: #4d4d4d; }
+
+figcaption.caption {
+  margin-left: 0.4em;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.ref-rows > a {
+  letter-spacing: normal;
+  font-size: 0.7em; }
+
+figure.ref-link {
+  margin: 0; }
+
+img.ref-link {
+  width: 100%; }
+
+a.pure-u-1-2.ref {
+  text-decoration: none; }
+
+figure.ref-link > figcaption {
+  color: white;
+  text-decoration: none; }

@@ -1,4 +1,3 @@
-import Counter from '../../counter/index.js'
 import Splash from './elements/1_splash/index.js'
 import Leistungen from './elements/2_leistungen/index.js'
 import Referenzen from './elements/3_referenzen/index.js'
