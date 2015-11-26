@@ -71,7 +71,7 @@ module.exports = {
           type: 'image',
           external_link: 'https://www.youtube.com/embed/y1PhoiKOIvQ',
           link: 'http://res.cloudinary.com/jefe-io/image/upload/v1448567245/bifi_ugtyog.jpg',
-          caption: 'Werbefilmproduktion „BiFi SnackPack“ TV und Online'
+          caption: 'Werbefilmkomposition „BiFi SnackPack“ TV und Online'
         }
       ]
     }
