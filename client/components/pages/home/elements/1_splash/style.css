@@ -152,6 +152,7 @@ div.make-it-container {
   position: absolute;
   top: 10em;
   z-index: 20;
+  background-color: rgba(33, 49, 62, 0.7);
 }
 p.sub-epic {
   color: white;
