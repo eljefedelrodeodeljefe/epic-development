@@ -80,7 +80,7 @@ module.exports = {
         },
         {
           name: 'Nude',
-          external_link: '',
+          external_link: 'http://nude-agency.de/',
           image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1449013642/epic_partner_logo_nude_igsahy.png'
         }
       ]
