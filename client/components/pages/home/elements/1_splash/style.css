@@ -151,9 +151,17 @@ div.make-it-container {
   width: 100%;
   position: absolute;
   top: 10em;
-  z-index: 20;
-  background-color: rgba(33, 49, 62, 0.7);
+  z-index: 2;
+  /*background-color: rgba(33, 49, 62, 0.7);*/
 }
+
+p.splash-text-bg {
+  background-color: rgba(33, 49, 62, 0.7);
+  padding: 0.6em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+
 p.sub-epic {
   color: white;
   margin-left: auto;
