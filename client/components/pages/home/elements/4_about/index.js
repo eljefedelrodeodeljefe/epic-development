@@ -77,6 +77,11 @@ module.exports = {
           name: 'Babylon',
           external_link: '',
           image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1448058626/epic_partner_logo_babylon_edyxls.png'
+        },
+        {
+          name: 'Nude',
+          external_link: '',
+          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1449013642/epic_partner_logo_nude_igsahy.png'
         }
       ]
     }
