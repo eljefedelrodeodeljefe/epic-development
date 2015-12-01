@@ -173,6 +173,10 @@ p.sub-epic {
   position: relative;
 }
 
+p.sub-epic.justify {
+  text-align: justify;
+}
+
 p.sub-epic.bigger {
   font-size: 1.5em;
 }
