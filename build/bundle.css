@@ -541,6 +541,10 @@ p.sub-epic {
   position: relative;
 }
 
+p.sub-epic.justify {
+  text-align: justify;
+}
+
 p.sub-epic.bigger {
   font-size: 1.5em;
 }
@@ -625,6 +629,11 @@ div.pure-g.leistungen > div > p {
 
 .content-subhead.leistungen {
   color: #4d4d4d;
+}
+
+span.author {
+  font-size: 80%;
+  font-style: italic;
 }
 .imprint.left {
   background: rgba(157, 164, 187, 0.5);
