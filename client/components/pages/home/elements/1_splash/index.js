@@ -7,7 +7,7 @@ let links = [
 ]
 module.exports = {
   template: require('./template.html'),
-  data: function() {
+  data: function () {
     return {
       links: links
     }
@@ -15,10 +15,10 @@ module.exports = {
   components: {
 
   },
-  ready: function() {
+  ready: function () {
     var checked = 1
     setInterval(function () {
-      document.querySelector('input#img-' + checked).checked = true;
+      document.querySelector('input#img-' + checked).checked = true
       checked = checked === links.length ? checked = 1 : checked + 1
     }, 7500)
   }

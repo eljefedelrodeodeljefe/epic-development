@@ -20,21 +20,18 @@ var App = Vue.extend({
 // End of setting up vue
 
 // Routing below...
-var options = {
-  hashbang: false
-}
 
 var router = new VueRouter({
-  hashbang: true
+  hashbang: false
 })
 
 router.map({
-    '/': {
-      component: Home
-    },
-    '/datenschutz': {
-      component: Datenschutz
-    }
+  '/': {
+    component: Home
+  },
+  '/datenschutz': {
+    component: Datenschutz
+  }
 })
 
 router.start(App, '#app')

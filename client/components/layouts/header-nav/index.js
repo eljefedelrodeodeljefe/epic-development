@@ -1,14 +1,15 @@
 
 module.exports = {
   data: function () {
-    return
+    return {
       msg: 'Hello from Component Home!'
+    }
   },
   template: require('./template.html'),
   methods: {
-  jump: function (h) {
-    var pos = document.getElementById(h).offsetTop;
-    window.scrollTo(0, pos - 120);
+    jump: function (h) {
+      var pos = document.getElementById(h).offsetTop
+      window.scrollTo(0, pos - 120)
+    }
   }
 }
-};
