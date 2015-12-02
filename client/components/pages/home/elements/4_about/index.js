@@ -24,34 +24,9 @@ module.exports = {
           image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672004/epic_partner_logo_deezer_wvc1wm.png'
         },
         {
-          name: 'Berliner Pilsener',
-          external_link: 'http://www.berliner-pilsner.de',
-          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672004/epic_partner_logo_berliner_pilsener_tbxwzp.png'
-        },
-        {
-          name: 'Absolut',
-          external_link: 'http://www.absolut.com/de',
-          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672003/epic_partner_logo_absolut_uihq8f.png'
-        },
-        {
-          name: 'FLACONI NEO',
-          external_link: 'http://www.flaconi-neo.de',
-          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672002/epic_partner_logo_flaconi_neo_jbsdyo.png'
-        },
-        {
-          name: 'Pernod Ricard',
-          external_link: 'http://www.pernodricard.de',
-          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672004/epic_partner_logo_pernod_cwt09c.png'
-        },
-        {
-          name: 'fritz-kola',
-          external_link: 'http://www.fritz-kola.de',
-          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1448057634/epic_partner_logo_fritz_jxoige.png'
-        },
-        {
-          name: 'Nicolas Feuillatte',
-          external_link: 'http://www.nicolas-feuillatte.com',
-          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672006/epic_partner_logo_champagner_c6mqnh.png'
+          name: 'Nude',
+          external_link: 'http://nude-agency.de/',
+          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1449013642/epic_partner_logo_nude_igsahy.png'
         },
         {
           name: 'Pot of Gold:',
@@ -79,9 +54,29 @@ module.exports = {
           image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1448058626/epic_partner_logo_babylon_edyxls.png'
         },
         {
-          name: 'Nude',
-          external_link: 'http://nude-agency.de/',
-          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1449013642/epic_partner_logo_nude_igsahy.png'
+          name: 'Absolut',
+          external_link: 'http://www.absolut.com/de',
+          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672003/epic_partner_logo_absolut_uihq8f.png'
+        },
+        {
+          name: 'FLACONI NEO',
+          external_link: 'http://www.flaconi-neo.de',
+          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672002/epic_partner_logo_flaconi_neo_jbsdyo.png'
+        },
+        {
+          name: 'Pernod Ricard',
+          external_link: 'http://www.pernodricard.de',
+          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672004/epic_partner_logo_pernod_cwt09c.png'
+        },
+        {
+          name: 'fritz-kola',
+          external_link: 'http://www.fritz-kola.de',
+          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1448057634/epic_partner_logo_fritz_jxoige.png'
+        },
+        {
+          name: 'Nicolas Feuillatte',
+          external_link: 'http://www.nicolas-feuillatte.com',
+          image_link: 'http://res.cloudinary.com/jefe-io/image/upload/v1447672006/epic_partner_logo_champagner_c6mqnh.png'
         }
       ]
     }
