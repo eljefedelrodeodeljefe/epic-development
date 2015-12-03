@@ -15,5 +15,13 @@ module.exports = {
     About,
     Newsletter,
     FooterNav
+  },
+  ready: function () {
+    /**
+     * Deactivate splash here
+     */
+    setTimeout(function () {
+      document.querySelector('#splash-op').checked = true
+    }, 2000)
   }
 }
