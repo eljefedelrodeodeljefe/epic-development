@@ -3,6 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>EPIC! Development</title>
+    <style media="screen">
+      /*
+        What is happening here?
+        To have the splash screen really early you expect it to be in the first package along the index.html
+        no extra deps here. Only JS shall deaactivate the splash automatically on ready
+       */
+      .splash-lower {
+        width:100%;
+        height:100%;
+        opacity:0.8;
+      }
+      input{
+        display:none;
+      }
+      label > img.splash-splash-logo {
+        margin-top: 5em;
+        width: 40%;
+        padding-bottom: 27%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQyMC44IDI5Mi4zIiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojRkZGRkZGO30NCjwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTU4LjMgMTAxLjFoMzcuOHYyNUg1OC4zdjUxLjNoNDcuNXYyNWgtNzV2LTE3NWg3NXYyNUg1OC4zVjEwMS4xek0yMDQuMyA3MC42djIyLjhjMCAyOC0xMy41IDQzLjMtNDEgNDMuM2gtMTN2NjUuOGgtMjcuNXYtMTc1aDQwLjVDMTkwLjggMjcuMyAyMDQuMyA0Mi42IDIwNC4zIDcwLjZ6TTE1MC4zIDUyLjN2NTkuMmgxM2M4LjggMCAxMy41LTQgMTMuNS0xNi41VjY4LjhjMC0xMi41LTQuOC0xNi41LTEzLjUtMTYuNUgxNTAuM3pNMjE3LjEgMjcuM2gyNy41djE3NWgtMjcuNVYyNy4zek0zNDQuMyAxMzcuMXYyMy4yYzAgMjgtMTQgNDQtNDEgNDQgLTI3IDAtNDEtMTYtNDEtNDR2LTkxYzAtMjggMTQtNDQgNDEtNDQgMjcgMCA0MSAxNiA0MSA0NHYxN2gtMjZWNjcuNmMwLTEyLjUtNS41LTE3LjItMTQuMy0xNy4yIC04LjggMC0xNC4yIDQuOC0xNC4yIDE3LjJ2OTQuNWMwIDEyLjUgNS41IDE3IDE0LjIgMTcgOC44IDAgMTQuMy00LjUgMTQuMy0xN3YtMjVIMzQ0LjN6TTM2NC42IDE2My42bC0zLjUtNjMuM3YtNzNoMjcuNXY3M2wtMy41IDYzLjNIMzY0LjZ6TTM4OC4xIDE3NS44djI2LjVoLTI2LjV2LTI2LjVIMzg4LjF6Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMwLjMgMjE2LjVINDVjOS4zIDAgMTMuOSA1LjIgMTMuOSAxNC42VjI2MWMwIDkuNS00LjYgMTQuNi0xMy45IDE0LjZIMzAuM1YyMTYuNXpNMzkuNiAyMjQuOXY0Mi4zaDUuMmMzIDAgNC43LTEuNSA0LjctNS43di0zMC44YzAtNC4yLTEuOC01LjctNC43LTUuN0gzOS42ek03NC4xIDI0MS40aDEyLjh2OC41SDc0LjF2MTcuM2gxNi4xdjguNUg2NC44di01OS4yaDI1LjR2OC41SDc0LjFWMjQxLjR6TTEwOS44IDI2NC43aDAuMmw3LTQ4LjNoOC41bC05LjEgNTkuMmgtMTMuOWwtOS4xLTU5LjJoOS40TDEwOS44IDI2NC43ek0xMzkuMiAyNDEuNGgxMi44djguNWgtMTIuOHYxNy4zaDE2LjF2OC41aC0yNS40di01OS4yaDI1LjR2OC41aC0xNi4xVjI0MS40ek0xNjEgMjE2LjVoOS4zdjUwLjdoMTUuM3Y4LjVIMTYxVjIxNi41ek0xODguOCAyMzAuNmMwLTkuNSA1LTE0LjkgMTQuMS0xNC45IDkuMSAwIDE0LjEgNS40IDE0LjEgMTQuOXYzMC44YzAgOS41LTUgMTQuOS0xNC4xIDE0LjkgLTkuMSAwLTE0LjEtNS40LTE0LjEtMTQuOVYyMzAuNnpNMTk4LjEgMjYyYzAgNC4yIDEuOSA1LjggNC44IDUuOCAzIDAgNC44LTEuNiA0LjgtNS44di0zMS45YzAtNC4yLTEuOS01LjgtNC44LTUuOCAtMyAwLTQuOCAxLjYtNC44IDUuOFYyNjJ6TTI1MC42IDIzMS4xdjcuN2MwIDkuNS00LjYgMTQuNi0xMy45IDE0LjZoLTQuNHYyMi4yaC05LjN2LTU5LjJoMTMuN0MyNDYgMjE2LjUgMjUwLjYgMjIxLjYgMjUwLjYgMjMxLjF6TTIzMi40IDIyNC45djIwaDQuNGMzIDAgNC42LTEuNCA0LjYtNS42di04LjljMC00LjItMS42LTUuNi00LjYtNS42SDIzMi40ek0yNzQuNSAyNTguNGgwLjJsNi4zLTQyaDEyLjl2NTkuMmgtOC44di00Mi40aC0wLjJsLTYuMyA0Mi40aC04LjhsLTYuOC00MS44aC0wLjJ2NDEuOGgtOC4xdi01OS4yaDEyLjlMMjc0LjUgMjU4LjR6TTMwOS45IDI0MS40aDEyLjh2OC41aC0xMi44djE3LjNIMzI2djguNWgtMjUuNHYtNTkuMkgzMjZ2OC41aC0xNi4xVjI0MS40ek0zNDAuMiAyMzIuOEgzNDB2NDIuOGgtOC40di01OS4yaDExLjdsOS40IDM1LjRoMC4ydi0zNS40aDguM3Y1OS4yaC05LjVMMzQwLjIgMjMyLjh6TTM2NS4xIDIxNi41aDI4Ljd2OC41aC05Ljd2NTAuN2gtOS4zdi01MC43aC05LjdWMjE2LjV6Ii8+PC9zdmc+");
+      }
+      .splash-lower label{
+        font-family: 'NotCourierSans';
+        text-transform:uppercase;
+        font-size:40px;
+        text-align:center;
+        width:100%;
+        height:100%;
+        padding: 100%;
+      }
+      .splash-lower label:hover{
+        cursor:pointer;
+      }
+      .overlay {
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.9);
+      }
+      .splash-lower~.overlay-hugeinc{
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+        transition: opacity 0.5s, visibility 0s 0.5s;
+      }
+      #splash-op {
+        z-index: 100;
+      }
+      #splash-op:checked~.overlay-hugeinc{
+        opacity: 0;
+
+          visibility: hidden;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+      }
+      .overlay-hugeinc nav {
+        -moz-perspective: 300px;
+      }
+
+    </style>
     <link rel="stylesheet" href="bundle.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css">
     <script>
@@ -17,6 +83,12 @@
     </script>
   </head>
   <body>
+    <input type="checkbox" id="splash-op"></input>
+    <div class="overlay overlay-hugeinc">
+      <div class="splash-lower">
+        <label for="splash-op"><img class="splash-splash-logo" alt=""></label>
+      </div>
+    </div>
     <app id="app"></app>
     <script src="build.js"></script>
   </body>
