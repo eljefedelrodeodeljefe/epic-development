@@ -3,6 +3,20 @@
   margin-top: 2em;
 }
 
+div.pure-g.leistungen {
+  max-width: 60em;
+  display: inline-block;
+}
+
+div#leistungen {
+  text-align: center
+}
+
+.content-subhead.leistungen {
+    text-align: left;
+}
+
+
 div.leistungen > hr {
   border: 0;
   height: 0;
