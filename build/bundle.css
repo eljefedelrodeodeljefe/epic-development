@@ -554,13 +554,44 @@ p.sub-epic.block {
   overflow-y: auto;
 }
 
-@media (max-width: 594px) {
+@media (min-width: 320px) {
+  p.sub-epic.block {
+      max-height: 2em;
+  }
+}
+
+@media (min-width: 680px) {
+  p.sub-epic.block {
+      max-height: 6em;
+  }
+}
+
+@media (min-width: 1200px) {
+  p.sub-epic.block {
+    max-height: none;
+  }
+}
+
+
+/*@media (max-width: 200px) {
   p.sub-epic.block {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and ( min-width: 768px ) {
+  p.sub-epic.block {
+    max-height: 4.5em;
+  }
+}
+
+@media screen and ( max-width: 769px ) {
+  p.sub-epic.block {
+    max-height: 8em;
+  }
+}*/
+
+/*@media (max-width: 768px) {
   p.sub-epic.block {
     max-height: 8em;
   }
@@ -570,7 +601,7 @@ p.sub-epic.block {
   p.sub-epic.block {
     max-height: 10em;
   }
-}
+}*/
 .wrapper {
   width: 100%;
   /* whatever width you want */
@@ -596,6 +627,20 @@ p.sub-epic.block {
   padding: 2em;
   margin-top: 2em;
 }
+
+div.pure-g.leistungen {
+  max-width: 60em;
+  display: inline-block;
+}
+
+div#leistungen {
+  text-align: center
+}
+
+.content-subhead.leistungen {
+    text-align: left;
+}
+
 
 div.leistungen > hr {
   border: 0;
