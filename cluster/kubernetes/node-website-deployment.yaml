@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: epic-development
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: epic-development
+    spec:
+      containers:
+      - name: epic-development
+        image: eu.gcr.io/cluster-01-1252/epic-development:latest
+        ports:
+        - containerPort: 3000

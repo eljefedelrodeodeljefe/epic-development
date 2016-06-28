@@ -4,13 +4,13 @@
   "description": "Website based on express and Vue.js for Nude Artist Management.",
   "main": "index.js",
   "scripts": {
-    "dev-build": "npm run copy & watchify -vd -p [ parcelify -wo build/bundle.css ] -t [ babelify --presets [ es2015 ] ] -t stringify -t vueify -t [ browserify-css --autoInject=true --minify=true --rebaseUrls=true ] -e client/main.js -o build/build.js & nodemon server/app.js",
+    "dev-build": "npm run copy & watchify -vd -p [ parcelify -wo build/bundle.css ] -t [ babelify --presets [ es2015 ] ] -t stringify -t vueify -t [ browserify-css --autoInject=true --minify=true --rebaseUrls=true ] -e client/main.js -o build/build.js & nodemon app.js",
     "prod": "NODE_ENV=production npm run copy-prod && uglifyjs --compress --mangle -o build/prod/build.js -- build/build.js",
     "copy": "node -e 'var fs = require(\"fs\");fs.createReadStream(\"client/index.html\").pipe(fs.createWriteStream(\"build/index.html\"));'",
     "copy-prod": "node -e 'var fs = require(\"fs\");fs.createReadStream(\"client/production.html\").pipe(fs.createWriteStream(\"build/index.html\"));'",
     "dev": "nodemon src/website/app.js --watch src/website",
     "test": "tape 'test/**/*.spec.js'",
-    "build-website": "node src/website/build.js",
+    "build-website": "npm run prod && build-website-container",
     "build-website-container": "docker build -t eu.gcr.io/cluster-01-1252/epic-development:latest -t eu.gcr.io/cluster-01-1252/epic-development:$TAG -f cluster/container/Dockerfile-Website . && gcloud docker push eu.gcr.io/cluster-01-1252/epic-development:latest && gcloud docker push eu.gcr.io/cluster-01-1252/epic-development:$TAG"
   },
   "repository": {
@@ -31,7 +31,6 @@
     "express": "^4.13.4",
     "gcloud": "^0.33.0",
     "json-chop": "^1.0.5",
-    "mongoose": "^4.4.16",
     "pino": "^2.4.0",
     "vue": "^1.0.0"
   },
