@@ -1,0 +1,60 @@
+{
+  "name": "epic-development.com",
+  "version": "0.1.0-alpha",
+  "description": "Website based on express and Vue.js for Nude Artist Management.",
+  "main": "index.js",
+  "scripts": {
+    "dev-build": "npm run copy & watchify -vd -p [ parcelify -wo build/bundle.css ] -t [ babelify --presets [ es2015 ] ] -t stringify -t vueify -t [ browserify-css --autoInject=true --minify=true --rebaseUrls=true ] -e client/main.js -o build/build.js & nodemon server/app.js",
+    "prod": "NODE_ENV=production npm run copy-prod && uglifyjs --compress --mangle -o build/prod/build.js -- build/build.js",
+    "copy": "node -e 'var fs = require(\"fs\");fs.createReadStream(\"client/index.html\").pipe(fs.createWriteStream(\"build/index.html\"));'",
+    "copy-prod": "node -e 'var fs = require(\"fs\");fs.createReadStream(\"client/production.html\").pipe(fs.createWriteStream(\"build/index.html\"));'",
+    "dev": "nodemon src/website/app.js --watch src/website",
+    "test": "tape 'test/**/*.spec.js'",
+    "build-website": "node src/website/build.js",
+    "build-website-container": "docker build -t eu.gcr.io/cluster-01-1252/epic-development:latest -t eu.gcr.io/cluster-01-1252/epic-development:$TAG -f cluster/container/Dockerfile-Website . && gcloud docker push eu.gcr.io/cluster-01-1252/epic-development:latest && gcloud docker push eu.gcr.io/cluster-01-1252/epic-development:$TAG"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eljefedelrodeodeljefe/epic-development.com.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Robert Jefe Lindstaedt <robert.lindstaedt@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/eljefedelrodeodeljefe/epic-development.com/issues"
+  },
+  "homepage": "https://github.com/eljefedelrodeodeljefe/epic-development.com#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gcloud": "^0.33.0",
+    "json-chop": "^1.0.5",
+    "mongoose": "^4.4.16",
+    "pino": "^2.4.0",
+    "vue": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-runtime": "^5.8.25",
+    "babelify": "^7.2.0",
+    "browserify-css": "^0.8.1",
+    "browserify-hmr": "^0.3.1",
+    "insert-css": "^0.2.0",
+    "jade": "^1.11.0",
+    "nodemon": "^1.8.1",
+    "parcelify": "^2.1.0",
+    "parcelify-import-resolver": "0.0.2",
+    "purecss": "^0.6.0",
+    "sass-css-stream": "^0.1.6",
+    "stringify": "^3.1.0",
+    "uglify-js": "^2.5.0",
+    "vue-hot-reload-api": "^1.2.1",
+    "vue-router": "^0.7.5",
+    "vueify": "^5.0.0",
+    "vueify-insert-css": "^1.0.0",
+    "watchify": "^3.4.0"
+  }
+}
